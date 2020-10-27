@@ -47,9 +47,9 @@ while true {
 				var q = "", w = ""
 				if car.yearOfIssue.isEmpty {q = "-"} else {q = car.yearOfIssue}
 				if car.carNumber.isEmpty {w = ""} else {w = ", гос.номер: \(car.carNumber)"}
-			print(info+q+w)
-				}
+				print(info+q+w)
 			}
+		}
 	case 3 :
 		printCatalog()
 		let input3 = Int(readLine()!)
@@ -64,6 +64,4 @@ while true {
 		print("Вы ввели недопустимое число, попробуйте снова")
 	}
 }
-
-
 
