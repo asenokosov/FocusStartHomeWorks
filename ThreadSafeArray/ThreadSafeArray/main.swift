@@ -14,9 +14,9 @@ let group = DispatchGroup()
 
 group.enter()
 
-DispatchQueue.global(qos: .userInteractive).async {
+DispatchQueue.global(qos: .background).async {
 	for i in 1...1000 {
-		array1.appendTSA(i)
+		array1.append(i)
 		print("Выполняю потокобезопасный")
 	}
 	group.leave()
@@ -24,7 +24,7 @@ DispatchQueue.global(qos: .userInteractive).async {
 
 group.enter()
 
-DispatchQueue.global(qos: .userInteractive).async {
+DispatchQueue.global(qos: .background).async {
 	for i in 1...1000 {
 		array2.append(i)
 		print("Выполняю обычный массив")
