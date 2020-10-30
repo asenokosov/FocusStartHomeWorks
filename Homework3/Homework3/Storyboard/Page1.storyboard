@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPb-d5-aRO">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page1-->
+        <scene sceneID="s2d-Sl-FyR">
+            <objects>
+                <viewController id="hPb-d5-aRO" customClass="ViewControllerPage1" customModule="Homework3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vPg-Rp-hZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="Eax-3v-wpd">
+                                <rect key="frame" x="10" y="8" width="394" height="493.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С небольшим тесктом" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="G6n-06-cu1">
+                                        <rect key="frame" x="108.33333333333333" y="0.0" width="177.66666666666669" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лэйбл бОльшего размера" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="U9C-4w-E4w">
+                                        <rect key="frame" x="15" y="91" width="364" height="42.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А тут вообще  две строки!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="9f4-xu-ulQ">
+                                        <rect key="frame" x="92.333333333333329" y="188.66666666666666" width="209.33333333333337" height="74.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="32"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-I9-0ct">
+                                        <rect key="frame" x="167" y="318.33333333333331" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mgf-I9-0ct" secondAttribute="height" multiplier="1:1" id="oCd-Sl-bv5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-nB-M2L">
+                                        <rect key="frame" x="167" y="433.33333333333331" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xNI-nB-M2L" secondAttribute="height" multiplier="1:1" id="hMh-zE-ATQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madeira" translatesAutoresizingMaskIntoConstraints="NO" id="92B-tf-yAS">
+                                <rect key="frame" x="16" y="509.33333333333331" width="382" height="169.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="92B-tf-yAS" secondAttribute="height" multiplier="9:4" id="i2b-eG-oCO"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hRq-zS-lOo">
+                                <rect key="frame" x="181.66666666666666" y="569" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0tO-kM-S8L"/>
+                                    <constraint firstAttribute="height" constant="50" id="GGc-2y-oQl"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yEE-qx-1lx"/>
+                        <color key="backgroundColor" red="0.24175930464703271" green="0.40996147162820273" blue="0.69182265228426398" alpha="0.84120826198630139" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yEE-qx-1lx" firstAttribute="trailing" secondItem="Eax-3v-wpd" secondAttribute="trailing" constant="10" id="5yc-yu-XcX"/>
+                            <constraint firstItem="92B-tf-yAS" firstAttribute="leading" secondItem="yEE-qx-1lx" secondAttribute="leading" constant="16" id="8L4-sG-G0k"/>
+                            <constraint firstItem="yEE-qx-1lx" firstAttribute="trailing" secondItem="92B-tf-yAS" secondAttribute="trailing" constant="16" id="dff-jm-B93"/>
+                            <constraint firstItem="hRq-zS-lOo" firstAttribute="centerX" secondItem="vPg-Rp-hZJ" secondAttribute="centerX" constant="-0.5" id="h6U-S4-O7T"/>
+                            <constraint firstItem="yEE-qx-1lx" firstAttribute="bottom" secondItem="92B-tf-yAS" secondAttribute="bottom" constant="8" id="hFV-aA-Dyb"/>
+                            <constraint firstItem="hRq-zS-lOo" firstAttribute="centerY" secondItem="92B-tf-yAS" secondAttribute="centerY" id="nzn-tN-A84"/>
+                            <constraint firstItem="92B-tf-yAS" firstAttribute="top" secondItem="Eax-3v-wpd" secondAttribute="bottom" constant="8" id="pfS-V0-NMM"/>
+                            <constraint firstItem="Eax-3v-wpd" firstAttribute="leading" secondItem="yEE-qx-1lx" secondAttribute="leading" constant="10" id="t7h-Lc-XRT"/>
+                            <constraint firstItem="Eax-3v-wpd" firstAttribute="top" secondItem="yEE-qx-1lx" secondAttribute="top" constant="8" id="xWf-pz-QGv"/>
+                            <constraint firstItem="92B-tf-yAS" firstAttribute="centerX" secondItem="vPg-Rp-hZJ" secondAttribute="centerX" id="y6L-Mk-4od"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Page1" image="icons8-for-you-50" id="0Jm-a5-dAS"/>
+                    <navigationItem key="navigationItem" title="Page1" id="7ev-Xz-z4J"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activIndicator" destination="hRq-zS-lOo" id="EHN-VG-7iK"/>
+                        <outlet property="circleButton" destination="mgf-I9-0ct" id="L2q-Uh-Tiw"/>
+                        <outlet property="labelBigSize" destination="U9C-4w-E4w" id="q1I-6w-r43"/>
+                        <outlet property="labelOnTop" destination="G6n-06-cu1" id="Xlu-jW-yfS"/>
+                        <outlet property="labelThisTwoString" destination="9f4-xu-ulQ" id="NJV-cV-IPi"/>
+                        <outlet property="ourImage" destination="92B-tf-yAS" id="qEe-Z9-VNk"/>
+                        <outlet property="roundingButton" destination="xNI-nB-M2L" id="Uq8-K6-A52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trz-hy-zAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="-468"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-for-you-50" width="25" height="25"/>
+        <image name="madeira" width="640" height="427"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
