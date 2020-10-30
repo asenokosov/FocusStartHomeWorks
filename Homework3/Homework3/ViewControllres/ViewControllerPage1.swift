@@ -21,25 +21,39 @@ class ViewControllerPage1: UIViewController {
 	@IBOutlet weak var activIndicator: UIActivityIndicatorView!
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
 		buttonSettings()
-    }
+		activIndicator.startAnimating()
+	}
 
 
 
 }
 
 
+
+
+extension ViewControllerPage1 {
+	func animationIconActivity() {
+		activIndicator.startAnimating()
+	}
+}
+
+
+
 extension ViewControllerPage1 {
 	func buttonSettings() {
 		circleButton.layer.cornerRadius =
 			circleButton.bounds.size.width/2
-		circleButton.backgroundColor = .darkGray
+		circleButton.backgroundColor = UIColor(named: "#5D151F")
 		circleButton.layer.borderColor = UIColor.white.cgColor
 		circleButton.layer.borderWidth = 1
 		circleButton.setTitle("Circle", for: .normal)
 
 		roundingButton.layer.cornerRadius = 8
-		roundingButton.backgroundColor = .white
+		roundingButton.backgroundColor = UIColor(named: "#5D151F")
+		roundingButton.layer.borderColor = UIColor.white.cgColor
+		roundingButton.layer.borderWidth = 1
+		roundingButton.setTitle("Round", for: .normal)
 	}
 }
