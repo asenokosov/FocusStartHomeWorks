@@ -11,23 +11,21 @@ class ViewControllerPage2: UIViewController {
 
 	@IBOutlet weak var imageBook: UIImageView!
 
-	@IBOutlet weak var scrollText: UITextView!
-
 	@IBOutlet weak var textLabel: UILabel!
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        textSettings()
+        //textSettings()
     }
 
 }
 
 
-extension ViewControllerPage2 {
-	func textSettings() {
-		scrollText.font = UIFont(name: "Baskerville", size: 17)
-		scrollText.backgroundColor = self.view.backgroundColor
-		scrollText.layer.cornerRadius = 10
-		scrollText.textColor = .white
-	}
-}
+//extension ViewControllerPage2 {
+//	func textSettings() {
+//		scrollText.font = UIFont(name: "Baskerville", size: 17)
+//		scrollText.backgroundColor = self.view.backgroundColor
+//		scrollText.layer.cornerRadius = 10
+//		scrollText.textColor = .white
+//	}
+//}
