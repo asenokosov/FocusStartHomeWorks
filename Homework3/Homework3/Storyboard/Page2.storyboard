@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ua0-UI-Phv">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,14 +12,14 @@
             <objects>
                 <viewController id="ua0-UI-Phv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1a7-Ab-Zy3">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLI-og-rfE">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="old-books-436498_1920 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Ek5-3n-1S2">
-                                        <rect key="frame" x="136" y="8" width="752" height="431"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="philatelist-1844080_1920" translatesAutoresizingMaskIntoConstraints="NO" id="Ek5-3n-1S2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="297"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="297" id="1WL-h8-SJv">
                                                 <variation key="heightClass=compact-widthClass=compact" constant="234"/>
@@ -48,7 +47,7 @@
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="1WL-h8-SJv"/>
-                                                <include reference="F4d-YS-5k0"/>
+                                                <exclude reference="F4d-YS-5k0"/>
                                                 <exclude reference="fFh-CL-YZ4"/>
                                                 <include reference="mYR-Jg-Hzl"/>
                                                 <exclude reference="pcB-jX-7tg"/>
@@ -56,7 +55,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А тут высказывания Ницше" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="38J-rE-3kH">
-                                        <rect key="frame" x="300" y="537" width="424" height="44"/>
+                                        <rect key="frame" x="8" y="343" width="398" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="38J-rE-3kH" secondAttribute="height" multiplier="199:22" id="Cgs-Mn-QEu"/>
                                             <constraint firstAttribute="width" constant="358" id="dzz-VD-hdT"/>
@@ -83,7 +82,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-Rs-PaD">
-                                        <rect key="frame" x="115" y="652" width="794" height="372"/>
+                                        <rect key="frame" x="8" y="427.99999999999994" width="398" height="608.66666666666652"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="645" id="46C-2v-pqS"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="9K2-HN-qU6"/>
@@ -147,13 +146,15 @@
                                     <constraint firstItem="Ek5-3n-1S2" firstAttribute="centerX" secondItem="38J-rE-3kH" secondAttribute="centerX" id="4bt-9o-6XU"/>
                                     <constraint firstAttribute="trailing" secondItem="cPP-Rs-PaD" secondAttribute="trailing" constant="8" id="4cF-ey-9iG"/>
                                     <constraint firstItem="38J-rE-3kH" firstAttribute="leading" secondItem="Ek5-3n-1S2" secondAttribute="trailing" constant="46" id="5LJ-Hm-bgn"/>
+                                    <constraint firstItem="Ek5-3n-1S2" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" id="6Qb-OQ-PnU"/>
                                     <constraint firstAttribute="bottom" secondItem="cPP-Rs-PaD" secondAttribute="bottom" constant="293" id="6SA-gE-54v"/>
                                     <constraint firstItem="cPP-Rs-PaD" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="8" id="7KC-vj-5xw"/>
                                     <constraint firstItem="38J-rE-3kH" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="8" id="9LR-V2-c0A"/>
                                     <constraint firstItem="cPP-Rs-PaD" firstAttribute="centerX" secondItem="GLI-og-rfE" secondAttribute="centerX" id="AOS-9f-9br"/>
                                     <constraint firstItem="cPP-Rs-PaD" firstAttribute="top" secondItem="38J-rE-3kH" secondAttribute="bottom" constant="41" id="BNV-Iy-nGn"/>
                                     <constraint firstItem="Ek5-3n-1S2" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" constant="8" id="BoI-k7-Voq"/>
-                                    <constraint firstItem="Ek5-3n-1S2" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" constant="10" id="CmP-ui-Sc9"/>
+                                    <constraint firstItem="Ek5-3n-1S2" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" constant="10" id="COG-6B-CMP"/>
+                                    <constraint firstItem="Ek5-3n-1S2" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" id="CmP-ui-Sc9"/>
                                     <constraint firstItem="cPP-Rs-PaD" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="8" id="Ftn-TP-SHV"/>
                                     <constraint firstItem="38J-rE-3kH" firstAttribute="top" secondItem="Ek5-3n-1S2" secondAttribute="bottom" constant="80" id="ISH-dS-B0W">
                                         <variation key="heightClass=regular-widthClass=regular" constant="98"/>
@@ -167,6 +168,8 @@
                                     <constraint firstItem="cPP-Rs-PaD" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="52" id="Rsr-3X-1xR"/>
                                     <constraint firstAttribute="trailing" secondItem="cPP-Rs-PaD" secondAttribute="trailing" constant="8" id="SSr-hl-kZs"/>
                                     <constraint firstItem="38J-rE-3kH" firstAttribute="leading" secondItem="Ek5-3n-1S2" secondAttribute="trailing" constant="76" id="SWe-47-9dy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ek5-3n-1S2" secondAttribute="trailing" id="W5f-uH-hGS"/>
+                                    <constraint firstItem="Ek5-3n-1S2" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" id="XCK-SH-0GG"/>
                                     <constraint firstItem="Ek5-3n-1S2" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" constant="8" id="YhZ-Z7-ozB"/>
                                     <constraint firstItem="Ek5-3n-1S2" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="52" id="c8G-PA-uqe"/>
                                     <constraint firstItem="cPP-Rs-PaD" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="8" id="cED-J4-MeU"/>
@@ -176,13 +179,13 @@
                                     <constraint firstAttribute="trailing" secondItem="cPP-Rs-PaD" secondAttribute="trailing" constant="8" id="fdR-sk-Mo7"/>
                                     <constraint firstItem="38J-rE-3kH" firstAttribute="top" secondItem="GLI-og-rfE" secondAttribute="top" constant="103" id="fne-fQ-YF3"/>
                                     <constraint firstItem="Ek5-3n-1S2" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="8" id="iYS-LV-lly">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstAttribute="bottom" secondItem="cPP-Rs-PaD" secondAttribute="bottom" constant="58" id="j2E-iL-SwR">
                                         <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="Ek5-3n-1S2" secondAttribute="trailing" constant="8" id="lGg-JL-aCL">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="Ek5-3n-1S2" firstAttribute="leading" secondItem="GLI-og-rfE" secondAttribute="leading" constant="52" id="mSA-9e-ZD0"/>
                                     <constraint firstAttribute="trailing" secondItem="38J-rE-3kH" secondAttribute="trailing" constant="52" id="qvg-Sx-gxy"/>
@@ -201,9 +204,13 @@
                                     <mask key="constraints">
                                         <exclude reference="0e0-Qs-E5h"/>
                                         <exclude reference="4bt-9o-6XU"/>
+                                        <exclude reference="6Qb-OQ-PnU"/>
                                         <exclude reference="BoI-k7-Voq"/>
+                                        <exclude reference="COG-6B-CMP"/>
                                         <exclude reference="CmP-ui-Sc9"/>
                                         <exclude reference="Mh5-bb-Nts"/>
+                                        <exclude reference="W5f-uH-hGS"/>
+                                        <exclude reference="XCK-SH-0GG"/>
                                         <exclude reference="YhZ-Z7-ozB"/>
                                         <exclude reference="c8G-PA-uqe"/>
                                         <exclude reference="iYS-LV-lly"/>
@@ -294,9 +301,13 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="4bt-9o-6XU"/>
+                                        <exclude reference="4bt-9o-6XU"/>
+                                        <include reference="6Qb-OQ-PnU"/>
+                                        <exclude reference="COG-6B-CMP"/>
                                         <include reference="Mh5-bb-Nts"/>
-                                        <include reference="YhZ-Z7-ozB"/>
+                                        <include reference="W5f-uH-hGS"/>
+                                        <include reference="XCK-SH-0GG"/>
+                                        <exclude reference="YhZ-Z7-ozB"/>
                                         <include reference="3cR-Kj-Pew"/>
                                         <include reference="ISH-dS-B0W"/>
                                         <include reference="OBe-Qg-rzy"/>
@@ -309,7 +320,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fGi-Ig-ueu"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="1" green="0.77759928929289224" blue="0.50005349808802135" alpha="0.81554127215954886" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GLI-og-rfE" firstAttribute="leading" secondItem="1a7-Ab-Zy3" secondAttribute="leading" id="3fD-gs-R0i"/>
                             <constraint firstAttribute="bottom" secondItem="GLI-og-rfE" secondAttribute="bottom" id="6K4-aN-pcX"/>
@@ -409,14 +420,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9b6-5D-Hqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-801.5625" y="-752.34375"/>
+            <point key="canvasLocation" x="123" y="-902"/>
         </scene>
     </scenes>
     <resources>
         <image name="icons8-document-50" width="25" height="25"/>
-        <image name="old-books-436498_1920 (1)" width="1920" height="1280"/>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="philatelist-1844080_1920" width="1920" height="1280"/>
     </resources>
 </document>

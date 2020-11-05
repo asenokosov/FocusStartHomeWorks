@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3042B7E2552CA98008E808B /* ViewControllerPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3042B7D2552CA98008E808B /* ViewControllerPage3.swift */; };
 		C332A9C0254BDE0E007B0F64 /* Page1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C332A9BF254BDE0E007B0F64 /* Page1.storyboard */; };
 		C332A9C5254BDE41007B0F64 /* Page2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C332A9C4254BDE41007B0F64 /* Page2.storyboard */; };
 		C332A9CA254BDEB1007B0F64 /* Page3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C332A9C9254BDEB1007B0F64 /* Page3.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3042B7D2552CA98008E808B /* ViewControllerPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPage3.swift; sourceTree = "<group>"; };
 		C332A9BF254BDE0E007B0F64 /* Page1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Page1.storyboard; sourceTree = "<group>"; };
 		C332A9C4254BDE41007B0F64 /* Page2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Page2.storyboard; sourceTree = "<group>"; };
 		C332A9C9254BDEB1007B0F64 /* Page3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Page3.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				C332A9D5254C1E16007B0F64 /* ViewControllerPage1.swift */,
 				C332A9DF254C29E4007B0F64 /* ViewControllerPage2.swift */,
+				C3042B7D2552CA98008E808B /* ViewControllerPage3.swift */,
 			);
 			path = ViewControllres;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C84CFA254BC29500C8CE96 /* Homework3.xcdatamodeld in Sources */,
+				C3042B7E2552CA98008E808B /* ViewControllerPage3.swift in Sources */,
 				C332A9E0254C29E4007B0F64 /* ViewControllerPage2.swift in Sources */,
 				C332A9D6254C1E16007B0F64 /* ViewControllerPage1.swift in Sources */,
 				C3C84CF0254BC29400C8CE96 /* AppDelegate.swift in Sources */,

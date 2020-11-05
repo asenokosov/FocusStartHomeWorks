@@ -31,8 +31,6 @@ class ViewControllerPage1: UIViewController {
 }
 
 
-
-
 extension ViewControllerPage1 {
 	func animationIconActivity() {
 		activIndicator.startAnimating()
