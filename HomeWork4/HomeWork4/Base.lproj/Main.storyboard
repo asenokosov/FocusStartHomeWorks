@@ -570,10 +570,10 @@
             </objects>
             <point key="canvasLocation" x="-20" y="-746"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Main Split View Controller-->
         <scene sceneID="IhY-7P-VCt">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="rFq-4J-C5G" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" id="rFq-4J-C5G" customClass="MainSplitViewController" customModule="HomeWork4" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="4iK-aj-M9R" kind="relationship" relationship="masterViewController" id="3og-MT-6FM"/>
                         <segue destination="JJy-dg-tzi" kind="relationship" relationship="detailViewController" id="66A-oe-A0b"/>

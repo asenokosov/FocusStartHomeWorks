@@ -16,6 +16,7 @@
 		C3271F892554F3E8008769D5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3271F882554F3E8008769D5 /* DetailViewController.swift */; };
 		C3271FC725566373008769D5 /* CellsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3271FC625566373008769D5 /* CellsModel.swift */; };
 		C3271FCA2556637B008769D5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3271FC92556637B008769D5 /* CustomTableViewCell.swift */; };
+		C39B45252556CA7300CE6AD5 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B45242556CA7300CE6AD5 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C3271F882554F3E8008769D5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C3271FC625566373008769D5 /* CellsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellsModel.swift; path = HomeWork4/HomeWork4/Cell/CellsModel.swift; sourceTree = "<group>"; };
 		C3271FC92556637B008769D5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = HomeWork4/HomeWork4/Cell/CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C39B45242556CA7300CE6AD5 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				C3271F852554F1D1008769D5 /* MainTableViewController.swift */,
 				C3271F882554F3E8008769D5 /* DetailViewController.swift */,
+				C39B45242556CA7300CE6AD5 /* MainSplitViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				C3271FCA2556637B008769D5 /* CustomTableViewCell.swift in Sources */,
 				C319A2932553F79900DB773F /* AppDelegate.swift in Sources */,
 				C3271F862554F1D1008769D5 /* MainTableViewController.swift in Sources */,
+				C39B45252556CA7300CE6AD5 /* MainSplitViewController.swift in Sources */,
 				C319A2952553F79900DB773F /* SceneDelegate.swift in Sources */,
 				C3271F892554F3E8008769D5 /* DetailViewController.swift in Sources */,
 				C3271FC725566373008769D5 /* CellsModel.swift in Sources */,
