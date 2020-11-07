@@ -104,5 +104,6 @@ extension ViewControllerPage3 {
 		enterButtonSettings.layer.borderColor = UIColor.black.cgColor
 		enterButtonSettings.layer.cornerRadius = 20
 		enterButtonSettings.layer.masksToBounds = true
+
 	}
 }

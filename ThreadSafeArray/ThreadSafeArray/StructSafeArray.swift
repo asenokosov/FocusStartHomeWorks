@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ThreadSafeArray<Element> {
+class ThreadSafeArray<Element> {
 
 	private var saveArray = [Element]()
 	private let queue = DispatchQueue(label: "FokusStart.HomeWork2", attributes: .concurrent)
@@ -18,13 +18,13 @@ public class ThreadSafeArray<Element> {
 extension ThreadSafeArray {
 
 	func append(_ element: Element){
-		queue.async(flags: .barrier) {
+		self.queue.async(flags: .barrier) {
 			self.saveArray.append(element)
 		}
 	}
 
 	func remove(at index: Int){
-		queue.async(flags: .barrier) {
+		self.queue.async(flags: .barrier) {
 			guard self.saveArray.isEmpty == false else { return print("Данный массив пуст и удалять просто нечего") }
 			self.saveArray.remove(at: index)
 		}
@@ -33,7 +33,7 @@ extension ThreadSafeArray {
 	subscript(index: Int) -> Element? {
 		get {
 			var result: Element?
-			queue.async {
+			self.queue.async {
 				guard self.saveArray.indices.contains(index) else { return }
 				result = self.saveArray[index]
 			}
@@ -55,7 +55,7 @@ extension ThreadSafeArray {
 extension ThreadSafeArray where Element: Equatable {
 
 	func contains(_ element: Element) -> Bool {
-		return queue.sync {
+		return self.queue.sync {
 			self.saveArray.contains(element)
 		}
 	}
@@ -67,7 +67,7 @@ extension ThreadSafeArray {
 
 	var isEmpty: Bool {
 		var result = false
-		queue.sync {
+		self.queue.sync {
 			result = self.saveArray.isEmpty
 		}
 		return result
@@ -75,7 +75,7 @@ extension ThreadSafeArray {
 
 	var count: Int {
 		var result = 0
-		queue.sync {
+		self.queue.sync {
 			result = self.saveArray.count
 		}
 		return result
