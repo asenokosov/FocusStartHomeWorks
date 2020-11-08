@@ -25,6 +25,7 @@ class DetailViewController: UIViewController {
 	
 	func set() {
 		loadViewIfNeeded()
+		imageShadowSettings()
 		imageOneDetailView.image = cellObject?.imageFirst
 		imageTwoDetailView.image = cellObject?.secondImage
 		labelDetailView.text = cellObject?.smallDescription
@@ -36,5 +37,11 @@ class DetailViewController: UIViewController {
 extension DetailViewController: NewsObjectSelectedDelegate {
 	func newsObjectSelected(newsObject: CellsModel) {
 		self.cellObject = newsObject
+	}
+}
+
+extension DetailViewController {
+	func imageShadowSettings() {
+		imageOneDetailView.layer.cornerRadius = 8
 	}
 }
