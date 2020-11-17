@@ -22,27 +22,15 @@ class ViewControllerPage1: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		buttonSettings()
-		activIndicator.startAnimating()
-	}
-
-
-
-}
-
-
-extension ViewControllerPage1 {
-	func animationIconActivity() {
+		configureButtons()
 		activIndicator.startAnimating()
 	}
 }
 
 
-
-extension ViewControllerPage1 {
-	func buttonSettings() {
-		circleButton.layer.cornerRadius =
-			circleButton.bounds.size.width/2
+private extension ViewControllerPage1 {
+	func configureButtons() {
+		circleButton.layer.cornerRadius = circleButton.bounds.size.width / 2
 		circleButton.backgroundColor = UIColor(named: "#5D151F")
 		circleButton.layer.borderColor = UIColor.white.cgColor
 		circleButton.layer.borderWidth = 1
