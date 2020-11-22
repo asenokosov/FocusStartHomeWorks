@@ -5,8 +5,6 @@
 //  Copyright © 2020 HomeMade. All rights reserved.
 //
 
-import Foundation
-
 struct Car {
 	var manufacturer: String
 	var model: String

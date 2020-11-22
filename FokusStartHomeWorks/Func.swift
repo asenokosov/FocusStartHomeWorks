@@ -17,7 +17,7 @@ class Functions {
 	}
 	
 	func catalog() {
-		return print("Введите цифру, соответсвующую типу корпуса для фильтрации:", "\n", "1 - Hatchback", "\n", "2 - Sedan", "\n",  "любой другой ввод - Нет подходящего типа", "\n")
+		return print("Введите цифру, соответсвующую типу корпуса для фильтрации:", "\n", "1 - Хэтчбэк", "\n", "2 - Седан", "\n",  "любой другой ввод - Нет подходящего типа", "\n")
 	}
 	
 	func chooseBody() {
@@ -108,7 +108,8 @@ class Functions {
 		guard let writeInt = Int(writeString ?? "") else {
 			print(errorMessege)
 			return self.readInt()
-		}; return writeInt
+		}
+		return writeInt
 	}
 }
 
