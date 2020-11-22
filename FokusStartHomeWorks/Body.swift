@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Body {
-    case Unknown
-    case Hatchback
-    case Sedan
+enum Body: String {
+	case Unknown = "Неизвестный производитель"
+	case Hatchback = "Хэтчбэк"
+	case Sedan = "Седан"
 }

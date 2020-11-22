@@ -12,7 +12,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
 	var user: Users!
 	var ref: DatabaseReference!
-	var tasks = Array<Tasks>()
+	var tasksAndUserModel = Array<TaskAndUserModel>()
 
 	@IBOutlet weak var tableView: UITableView!
 
@@ -28,18 +28,18 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		super.viewWillAppear(animated)
 
 		ref.observe(.value, with: { [weak self] (snapshot) in
-			var _tasks = Array<Tasks>()
+			var _tasks = Array<TaskAndUserModel>()
 			for item in snapshot.children {
-				let task = Tasks(snapshot: item as! DataSnapshot)
+				let task = TaskAndUserModel(snapshot: item as! DataSnapshot)
 				_tasks.append(task)
 			}
-			self?.tasks = _tasks
+			self?.tasksAndUserModel = _tasks
 		self?.tableView.reloadData()
 		})
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return tasks.count
+		return tasksAndUserModel.count
 	}
 
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -48,13 +48,13 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			let task = tasks[indexPath.row]
+			let task = tasksAndUserModel[indexPath.row]
 			task.ref?.removeValue()
 		}
 	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		guard let cell = tableView.cellForRow(at: indexPath) else { return }
-		let task = tasks[indexPath.row]
+		let task = tasksAndUserModel[indexPath.row]
 		let complete = !task.completed
 		toggleCompletion(cell, complete: complete)
 		task.ref?.updateChildValues(["completed": complete])
@@ -67,9 +67,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-		let taskTitle = tasks[indexPath.row]
+		let taskTitle = tasksAndUserModel[indexPath.row]
 
-		let task = tasks[indexPath.row]
+		let task = tasksAndUserModel[indexPath.row]
 		let complete = task.completed
 		cell.textLabel?.text = taskTitle.title
 		cell.backgroundColor = .clear
