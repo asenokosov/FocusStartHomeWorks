@@ -5,12 +5,10 @@
 //  Copyright © 2020 HomeMade. All rights reserved.
 //
 
-import Foundation
-
 struct Car {
-	var manufacturer: String = ""
-    var model: String = ""
-    var body = Body.Unknown
-    var yearOfIssue: String = "-"
-    var carNumber: String = ""
+	var manufacturer: String
+	var model: String
+	var body: Body
+	var yearOfIssue: Int?
+	var carNumber: String?
 }
