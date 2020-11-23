@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rFq-4J-C5G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rFq-4J-C5G">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -352,7 +352,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell1" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="vFa-dm-6DI" customClass="CustomTableViewCell1" customModule="HomeWork4" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="vFa-dm-6DI" customClass="CustomTableViewCell" customModule="HomeWork4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFa-dm-6DI" id="Sxm-6N-leV">
@@ -447,12 +447,11 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="headerCellOne" destination="BF4-uo-Y2q" id="LLP-xI-MYa"/>
-                                    <outlet property="textCellOne" destination="Tkv-ed-kid" id="llf-1z-YR7"/>
-                                    <outlet property="timeInCellOne" destination="pkt-gL-iwg" id="uuk-2Z-0Rl"/>
+                                    <outlet property="headerCellOne" destination="BF4-uo-Y2q" id="Qve-FR-Dlb"/>
+                                    <outlet property="textCellOne" destination="Tkv-ed-kid" id="PVj-mB-8Fn"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell2" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" id="bW7-9b-CpN" customClass="CustomTableViewCell2" customModule="HomeWork4" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell2" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" id="bW7-9b-CpN" customClass="CustomTableViewCell" customModule="HomeWork4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="178" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bW7-9b-CpN" id="bMc-1U-Ty0">
@@ -550,12 +549,11 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="headre2" destination="lge-yk-ih7" id="fv2-Fd-Ioj"/>
-                                    <outlet property="label2" destination="RA6-cp-yz3" id="CCC-qQ-Btu"/>
-                                    <outlet property="timeInCellTwo" destination="x0H-5U-mS7" id="p6d-tN-D1m"/>
+                                    <outlet property="headre2" destination="lge-yk-ih7" id="IGt-bT-TMn"/>
+                                    <outlet property="label2" destination="RA6-cp-yz3" id="Zm8-Ua-Tr2"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell3" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" id="uYR-bf-vce" customClass="CustomTableViewCell3" customModule="HomeWork4" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell3" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" id="uYR-bf-vce" customClass="CustomTableViewCell" customModule="HomeWork4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="328" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uYR-bf-vce" id="Jhj-XJ-CCa">
@@ -588,11 +586,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="header3" destination="1tu-LG-5XL" id="rk6-WO-feV"/>
-                                    <outlet property="label3" destination="u5L-Ai-fwI" id="oK7-Ai-9KS"/>
+                                    <outlet property="header3" destination="1tu-LG-5XL" id="2wA-WB-CtG"/>
+                                    <outlet property="label3" destination="u5L-Ai-fwI" id="21W-5p-uUu"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell4" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell4" id="ecx-t3-WuX" customClass="CustomTableViewCell4" customModule="HomeWork4" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell4" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell4" id="ecx-t3-WuX" customClass="CustomTableViewCell" customModule="HomeWork4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="478" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ecx-t3-WuX" id="t6z-qc-cng">
@@ -692,12 +690,11 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="headerCellFour" destination="uru-N7-dzN" id="EU4-hU-opV"/>
-                                    <outlet property="labelCellFour" destination="wvw-pb-1M1" id="Iqq-dF-XLo"/>
-                                    <outlet property="timeInCellFour" destination="Nni-2a-usL" id="8hm-v8-2vv"/>
+                                    <outlet property="headerCellFour" destination="uru-N7-dzN" id="cdl-tP-jR3"/>
+                                    <outlet property="labelCellFour" destination="wvw-pb-1M1" id="8OG-nQ-6DO"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell5" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell5" id="DYO-28-8av" customClass="CustomTableViewCell5" customModule="HomeWork4" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell5" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell5" id="DYO-28-8av" customClass="CustomTableViewCell" customModule="HomeWork4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="628" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DYO-28-8av" id="pKj-rz-IbB">
@@ -719,7 +716,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="headerCellFive" destination="bUr-LK-cg9" id="Nv6-hf-Zto"/>
+                                    <outlet property="headerCellFive" destination="bUr-LK-cg9" id="fvX-bA-tMv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

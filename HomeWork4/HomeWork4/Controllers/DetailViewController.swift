@@ -8,41 +8,36 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+	
 	@IBOutlet weak var labelDetailView: UILabel!
-
+	
 	@IBOutlet weak var imageOneDetailView: UIImageView!
 	@IBOutlet weak var imageTwoDetailView: UIImageView!
-
+	
 	@IBOutlet weak var viewImageOne: UIView!
 	@IBOutlet weak var viewImageTwo: UIView!
-
+	
 	var cellObject: CellsModel? {
 		didSet {
-			set()
+			loadViewIfNeeded()
+			imageOneDetailView.image = cellObject?.imageFirst
+			imageTwoDetailView.image = cellObject?.secondImage
+			labelDetailView.text = cellObject?.smallDescription
+			navigationItem.title = cellObject?.headingNews
 		}
 	}
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setShadow()
-
 	}
-
+	
 	func setShadow() {
 		viewImageOne.shadowImage(cornerRadius: 10, shadowColor: .black, shadowRadius: 10)
 		imageOneDetailView.shadowImage(cornerRadius: 10, shadowColor: .black, shadowRadius: 10)
 		viewImageTwo.shadowImage(cornerRadius: 10, shadowColor: .black, shadowRadius: 10
 		)
 		imageTwoDetailView.shadowImage(cornerRadius: 10, shadowColor: .black, shadowRadius: 10)
-	}
-
-	func set() {
-		loadViewIfNeeded()
-		imageOneDetailView.image = cellObject?.imageFirst
-		imageTwoDetailView.image = cellObject?.secondImage
-		labelDetailView.text = cellObject?.smallDescription
-		navigationItem.title = cellObject?.headingNews
 	}
 }
 
@@ -51,6 +46,7 @@ extension DetailViewController: NewsObjectSelectedDelegate {
 		self.cellObject = newsObject
 	}
 }
+
 extension UIView {
 	func shadowImage(cornerRadius: CGFloat, shadowColor: UIColor, shadowOffset: CGSize = .zero, shadowOpacity: Float = 1, shadowRadius: CGFloat) {
 		layer.cornerRadius = cornerRadius
