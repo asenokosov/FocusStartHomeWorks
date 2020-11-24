@@ -10,7 +10,7 @@ import Foundation
 
 class Functions {
 	
-	let	errorMessege = "Введите корректное значение"
+	let	errorMessage = "Введите корректное значение"
 	
 	func menu () {
 		return print(" 1 - Добавление нового автомобиля", "\n", "2 - Вывод списка добавленных автомобилей", "\n", "3 - Вывод списка автомобилей с использованием фильтра по типу кузова автомобиля", "\n", "4 - Завершите программу", "\n")
@@ -30,9 +30,9 @@ class Functions {
 		car.model = self.checkString()
 		
 		print("Введите цифру, соответсвующую типу корпуса:", "\n", "1 - Хэтчбэк", "\n", "2 - Седан", "\n", "любой другой ввод - Нет подходящего типа")
-		let input2 = self.checkInt()
-		if input2 == 1 {car.body = .Hatchback}
-		else if input2 == 2 {car.body = .Sedan}
+		let carBody = self.checkInt()
+		if carBody == 1 {car.body = .Hatchback}
+		else if carBody == 2 {car.body = .Sedan}
 		
 		print("Введите год выпуска или нажмите Enter")
 		car.yearOfIssue = readInt()
@@ -62,13 +62,13 @@ class Functions {
 	}
 	
 	func addedCarsFilter() {
-		if let input3 = Int(readLine() ?? "") {
-			var x:Body
-			if input3 == 1 {x = .Hatchback}
-			else if input3 == 2 {x = .Sedan}
-			else {x = .Unknown}
-			for car in autoCatalog {
-				if car.body == x {print("Производитель: \(car.manufacturer), Модель: \(car.model), тип корпуса: \(car.body.rawValue)", "\n")}
+		if let carBody = Int(readLine() ?? "") {
+			var selectedBody:Body
+			if carBody == 1 {selectedBody = .Hatchback}
+			else if carBody == 2 {selectedBody = .Sedan}
+			else {selectedBody = .Unknown}
+			for _ in autoCatalog {
+				autoCatalog.filter{$0.body == selectedBody}.forEach{ self.result($0)}
 			}
 		} else {
 			return
@@ -83,7 +83,7 @@ class Functions {
 				writeString = string
 			}
 			else {
-				print(errorMessege)
+				print(errorMessage)
 			}
 		}
 		return writeString
@@ -96,7 +96,7 @@ class Functions {
 			if let int = Int(writeString) {
 				writeInt = int
 			} else {
-				print(errorMessege)
+				print(errorMessage)
 			}
 		}
 		return writeInt ?? 0
@@ -106,7 +106,7 @@ class Functions {
 		let writeString = readLine()
 		if writeString?.isEmpty ?? true { return nil }
 		guard let writeInt = Int(writeString ?? "") else {
-			print(errorMessege)
+			print(errorMessage)
 			return self.readInt()
 		}
 		return writeInt
