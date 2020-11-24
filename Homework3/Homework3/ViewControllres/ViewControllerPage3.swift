@@ -9,10 +9,10 @@ import UIKit
 
 class ViewControllerPage3: UIViewController {
 
-	let borderWidth: CGFloat = 2.0
-	let cornerRadius: CGFloat = 20
-	let masksToBounds: Bool = true
-	let ColorButtonBoreder: CGColor = UIColor.black.cgColor
+	private	let masksToBounds: Bool = true
+	private let ColorButtonBoreder: CGColor = UIColor.black.cgColor
+	private let duration = 10
+	private let keyboardHeight = 117
 
 	@IBOutlet weak var loginField: UITextField!
 	@IBOutlet weak var passwordField: UITextField!
@@ -25,6 +25,12 @@ class ViewControllerPage3: UIViewController {
 		settingEnterButton()
 		CenterNotification()
 	}
+
+	// Скрывает клавиатуру по тапу за пределами текстовых полей
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesBegan(touches, with: event)
+		self.view.endEditing(true)
+	}
 }
 
 
@@ -32,6 +38,7 @@ private extension ViewControllerPage3 {
 
 	//MARK: Center Notification Observer
 
+	
 	func CenterNotification() {
 		NotificationCenter.default.addObserver(self,
 											   selector: #selector(updateTextView(notification:)),
@@ -65,12 +72,6 @@ private extension ViewControllerPage3 {
 		}
 	}
 
-	// Скрывает клавиатуру по тапу за пределами текстовых полей
-	internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		super.touchesBegan(touches, with: event)
-		self.view.endEditing(true)
-	}
-
 	//MARK: Enter Button Behavior
 
 	@objc func updateTextView(notification: Notification) {
@@ -80,24 +81,24 @@ private extension ViewControllerPage3 {
 		else { return }
 
 		if notification.name == UIResponder.keyboardWillHideNotification {
-			UIView.animate(withDuration: 10, animations: { [self] () -> Void in
-				self.enterButtonConstraint.constant = enterButtonConstraint.constant - keyboardFrame.size.height + 117
+			UIView.animate(withDuration: TimeInterval(duration)) {
+				self.enterButtonConstraint.constant = self.enterButtonConstraint.constant - keyboardFrame.size.height + CGFloat(self.keyboardHeight)
 				self.view.layoutIfNeeded()
-			})
+			}
 		} else {
-			UIView.animate(withDuration: 10, animations: { () -> Void in
+			UIView.animate(withDuration: TimeInterval(duration)) {
 				self.enterButtonConstraint.constant = keyboardFrame.size.height
 				self.view.layoutIfNeeded()
-			})
+			}
 		}
 	}
 
 	//MARK: Settings button "ENTER"
 
 	func settingEnterButton() {
-		enterButtonSettings.layer.borderWidth = borderWidth
+		enterButtonSettings.layer.borderWidth = ButtonSize.borderWidth.rawValue
 		enterButtonSettings.layer.borderColor = ColorButtonBoreder
-		enterButtonSettings.layer.cornerRadius = cornerRadius
+		enterButtonSettings.layer.cornerRadius = ButtonSize.cornerRadius.rawValue
 		enterButtonSettings.layer.masksToBounds = masksToBounds
 	}
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPb-d5-aRO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPb-d5-aRO">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,10 +97,6 @@
                     <connections>
                         <outlet property="activIndicator" destination="hRq-zS-lOo" id="EHN-VG-7iK"/>
                         <outlet property="circleButton" destination="mgf-I9-0ct" id="L2q-Uh-Tiw"/>
-                        <outlet property="labelBigSize" destination="U9C-4w-E4w" id="q1I-6w-r43"/>
-                        <outlet property="labelOnTop" destination="G6n-06-cu1" id="Xlu-jW-yfS"/>
-                        <outlet property="labelThisTwoString" destination="9f4-xu-ulQ" id="NJV-cV-IPi"/>
-                        <outlet property="ourImage" destination="92B-tf-yAS" id="qEe-Z9-VNk"/>
                         <outlet property="roundingButton" destination="xNI-nB-M2L" id="Uq8-K6-A52"/>
                     </connections>
                 </viewController>
