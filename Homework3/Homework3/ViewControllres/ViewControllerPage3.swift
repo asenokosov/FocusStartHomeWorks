@@ -9,8 +9,6 @@ import UIKit
 
 class ViewControllerPage3: UIViewController {
 
-	private	let masksToBounds: Bool = true
-	private let ColorButtonBoreder: CGColor = UIColor.black.cgColor
 	private let duration = 10
 	private let keyboardHeight = 117
 
@@ -96,9 +94,9 @@ private extension ViewControllerPage3 {
 	//MARK: Settings button "ENTER"
 
 	func settingEnterButton() {
-		enterButtonSettings.layer.borderWidth = ButtonSize.borderWidth.rawValue
-		enterButtonSettings.layer.borderColor = ColorButtonBoreder
-		enterButtonSettings.layer.cornerRadius = ButtonSize.cornerRadius.rawValue
-		enterButtonSettings.layer.masksToBounds = masksToBounds
+		enterButtonSettings.layer.borderWidth = CGFloat(ButtonSize.borderWidth)
+		enterButtonSettings.layer.borderColor = ButtonSize.ColorButtonBoreder
+		enterButtonSettings.layer.cornerRadius = CGFloat(ButtonSize.cornerRadius)
+		enterButtonSettings.layer.masksToBounds = ButtonSize.masksToBounds
 	}
 }

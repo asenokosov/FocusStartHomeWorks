@@ -6,7 +6,9 @@
 //
 import UIKit
 
-enum ButtonSize: CGFloat {
-	case borderWidth = 2.0
-	case cornerRadius = 20
+enum ButtonSize {
+	static let borderWidth = 2.0
+	static let cornerRadius = 20
+	static let masksToBounds = true
+	static let ColorButtonBoreder: CGColor = UIColor.black.cgColor
 }
