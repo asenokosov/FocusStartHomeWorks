@@ -9,6 +9,15 @@ import UIKit
 
 class ViewControllerPage3: UIViewController {
 
+     private enum Constants {
+	 static let borderWidth: CGFloat = 2.0
+	 static let cornerRadius: CGFloat = 20
+	 static let duration: TimeInterval = 10
+	 static let keyboardHeight = 117
+	 static let masksToBounds = true
+	 static let colorButtonBoreder = UIColor.black.cgColor
+ }
+
 	@IBOutlet weak var loginField: UITextField!
 	@IBOutlet weak var passwordField: UITextField!
 	@IBOutlet weak var enterButtonSettings: UIButton!
@@ -95,13 +104,4 @@ private extension ViewControllerPage3 {
 		enterButtonSettings.layer.cornerRadius = Constants.cornerRadius
 		enterButtonSettings.layer.masksToBounds = Constants.masksToBounds
 	}
-}
-
-private enum Constants {
-	static let borderWidth: CGFloat = 2.0
-	static let cornerRadius: CGFloat = 20
-	static let duration: TimeInterval = 10
-	static let keyboardHeight = 117
-	static let masksToBounds = true
-	static let colorButtonBoreder = UIColor.black.cgColor
 }
