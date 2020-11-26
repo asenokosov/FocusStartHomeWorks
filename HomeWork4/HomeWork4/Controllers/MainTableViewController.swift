@@ -29,37 +29,37 @@ class MainTableViewController: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let currentNews = news[indexPath.row]
-		let cell = tableView.dequeueReusableCell(withIdentifier: "") as! CustomTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell\(indexPath.row)", for: indexPath) as! CustomTableViewCell
 
 
 		switch indexPath.row {
 
 		case 0:
-			let cellOne = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomTableViewCell
+			let cellOne = cell
 			cellOne.headerCellOne.text = currentNews.headingNews
 			cellOne.textCellOne.text = currentNews.textNews
 			return cellOne
 
 		case 1:
-			let cellTwo = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! CustomTableViewCell
+			let cellTwo = cell
 			cellTwo.headre2.text = currentNews.headingNews
 			cellTwo.label2.text = currentNews.textNews
 			return cellTwo
 
 		case 2:
-			let cellThree = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath) as! CustomTableViewCell
+			let cellThree = cell
 			cellThree.header3.text = currentNews.headingNews
 			cellThree.label3.text = currentNews.textNews
 			return cellThree
 
 		case 3:
-			let cellFour = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! CustomTableViewCell
+			let cellFour = cell
 			cellFour.headerCellFour.text = currentNews.headingNews
 			cellFour.labelCellFour.text = currentNews.textNews
 			return cellFour
 			
 		case 4:
-			let cellFive = tableView.dequeueReusableCell(withIdentifier: "Cell5", for: indexPath) as! CustomTableViewCell
+			let cellFive = cell
 			cellFive.headerCellFive.text = currentNews.headingNews
 			return cellFive
 

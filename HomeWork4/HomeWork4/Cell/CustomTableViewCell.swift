@@ -22,9 +22,3 @@ class CustomTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var headerCellFive: UILabel!
 }
-
-extension CustomTableViewCell: UITableViewController {
-	func draw() {
-		let cell = UITableView
-	}
-}
