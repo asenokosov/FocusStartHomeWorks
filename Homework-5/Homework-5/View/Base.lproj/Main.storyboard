@@ -146,6 +146,7 @@
                         <outlet property="loginField" destination="hko-dn-iT2" id="J0T-xM-5fW"/>
                         <outlet property="passButton" destination="CcP-o0-WCn" id="cv0-Ox-dn7"/>
                         <outlet property="passField" destination="OIZ-M1-ira" id="91J-wD-zvp"/>
+                        <outlet property="scrollView" destination="8bC-Xf-vdC" id="eB7-8H-tmh"/>
                         <segue destination="T3X-Vi-RSm" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="yS2-WJ-dLp"/>
                     </connections>
                 </viewController>
