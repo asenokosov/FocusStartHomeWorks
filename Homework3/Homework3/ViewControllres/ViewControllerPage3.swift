@@ -9,9 +9,6 @@ import UIKit
 
 class ViewControllerPage3: UIViewController {
 
-	private let duration = 10
-	private let keyboardHeight = 117
-
 	@IBOutlet weak var loginField: UITextField!
 	@IBOutlet weak var passwordField: UITextField!
 	@IBOutlet weak var enterButtonSettings: UIButton!
@@ -36,7 +33,6 @@ private extension ViewControllerPage3 {
 
 	//MARK: Center Notification Observer
 
-	
 	func CenterNotification() {
 		NotificationCenter.default.addObserver(self,
 											   selector: #selector(updateTextView(notification:)),
@@ -79,12 +75,12 @@ private extension ViewControllerPage3 {
 		else { return }
 
 		if notification.name == UIResponder.keyboardWillHideNotification {
-			UIView.animate(withDuration: TimeInterval(duration)) {
-				self.enterButtonConstraint.constant = self.enterButtonConstraint.constant - keyboardFrame.size.height + CGFloat(self.keyboardHeight)
+			UIView.animate(withDuration: Constants.duration) {
+				self.enterButtonConstraint.constant = self.enterButtonConstraint.constant - keyboardFrame.size.height + CGFloat(Constants.keyboardHeight)
 				self.view.layoutIfNeeded()
 			}
 		} else {
-			UIView.animate(withDuration: TimeInterval(duration)) {
+			UIView.animate(withDuration: Constants.duration) {
 				self.enterButtonConstraint.constant = keyboardFrame.size.height
 				self.view.layoutIfNeeded()
 			}
@@ -94,9 +90,18 @@ private extension ViewControllerPage3 {
 	//MARK: Settings button "ENTER"
 
 	func settingEnterButton() {
-		enterButtonSettings.layer.borderWidth = CGFloat(ButtonSize.borderWidth)
-		enterButtonSettings.layer.borderColor = ButtonSize.ColorButtonBoreder
-		enterButtonSettings.layer.cornerRadius = CGFloat(ButtonSize.cornerRadius)
-		enterButtonSettings.layer.masksToBounds = ButtonSize.masksToBounds
+		enterButtonSettings.layer.borderWidth = Constants.borderWidth
+		enterButtonSettings.layer.borderColor = Constants.colorButtonBoreder
+		enterButtonSettings.layer.cornerRadius = Constants.cornerRadius
+		enterButtonSettings.layer.masksToBounds = Constants.masksToBounds
 	}
+}
+
+private enum Constants {
+	static let borderWidth: CGFloat = 2.0
+	static let cornerRadius: CGFloat = 20
+	static let duration: TimeInterval = 10
+	static let keyboardHeight = 117
+	static let masksToBounds = true
+	static let colorButtonBoreder = UIColor.black.cgColor
 }
