@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPb-d5-aRO">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page1-->
+        <scene sceneID="s2d-Sl-FyR">
+            <objects>
+                <viewController id="hPb-d5-aRO" customClass="ViewControllerPage1" customModule="Homework3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vPg-Rp-hZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Eax-3v-wpd">
+                                <rect key="frame" x="0.0" y="8" width="320" height="367"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С небольшим тесктом" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="G6n-06-cu1">
+                                        <rect key="frame" x="71" y="0.0" width="178" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лэйбл бОльшего размера" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="U9C-4w-E4w">
+                                        <rect key="frame" x="0.0" y="60.5" width="320" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="highlightedColor" red="0.38455010699999997" green="0.46199137979999999" blue="0.58543449130000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А тут вообще  две строки!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="9f4-xu-ulQ">
+                                        <rect key="frame" x="55.5" y="143" width="209.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="32"/>
+                                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-I9-0ct">
+                                        <rect key="frame" x="130" y="217" width="60" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mgf-I9-0ct" secondAttribute="height" multiplier="1:1" id="oCd-Sl-bv5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Cicle">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-nB-M2L">
+                                        <rect key="frame" x="135" y="317" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xNI-nB-M2L" secondAttribute="height" multiplier="1:1" id="hMh-zE-ATQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Round">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tea-381235_640" translatesAutoresizingMaskIntoConstraints="NO" id="92B-tf-yAS">
+                                <rect key="frame" x="16" y="383" width="288" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="92B-tf-yAS" secondAttribute="height" multiplier="9:4" id="i2b-eG-oCO"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hRq-zS-lOo">
+                                <rect key="frame" x="134.5" y="422" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0tO-kM-S8L"/>
+                                    <constraint firstAttribute="height" constant="50" id="GGc-2y-oQl"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yEE-qx-1lx"/>
+                        <color key="backgroundColor" red="0.36470588235294116" green="0.082352941176470587" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yEE-qx-1lx" firstAttribute="trailing" secondItem="Eax-3v-wpd" secondAttribute="trailing" id="5yc-yu-XcX"/>
+                            <constraint firstItem="92B-tf-yAS" firstAttribute="leading" secondItem="yEE-qx-1lx" secondAttribute="leading" constant="16" id="8L4-sG-G0k"/>
+                            <constraint firstItem="yEE-qx-1lx" firstAttribute="trailing" secondItem="92B-tf-yAS" secondAttribute="trailing" constant="16" id="dff-jm-B93"/>
+                            <constraint firstItem="hRq-zS-lOo" firstAttribute="centerX" secondItem="vPg-Rp-hZJ" secondAttribute="centerX" constant="-0.5" id="h6U-S4-O7T"/>
+                            <constraint firstItem="yEE-qx-1lx" firstAttribute="bottom" secondItem="92B-tf-yAS" secondAttribute="bottom" constant="8" id="hFV-aA-Dyb"/>
+                            <constraint firstItem="hRq-zS-lOo" firstAttribute="centerY" secondItem="92B-tf-yAS" secondAttribute="centerY" id="nzn-tN-A84"/>
+                            <constraint firstItem="92B-tf-yAS" firstAttribute="top" secondItem="Eax-3v-wpd" secondAttribute="bottom" constant="8" id="pfS-V0-NMM"/>
+                            <constraint firstItem="Eax-3v-wpd" firstAttribute="leading" secondItem="yEE-qx-1lx" secondAttribute="leading" id="t7h-Lc-XRT"/>
+                            <constraint firstItem="Eax-3v-wpd" firstAttribute="top" secondItem="yEE-qx-1lx" secondAttribute="top" constant="8" id="xWf-pz-QGv"/>
+                            <constraint firstItem="92B-tf-yAS" firstAttribute="centerX" secondItem="vPg-Rp-hZJ" secondAttribute="centerX" id="y6L-Mk-4od"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Page1" image="icons8-for-you-50" id="0Jm-a5-dAS"/>
+                    <navigationItem key="navigationItem" title="Page1" id="7ev-Xz-z4J"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activIndicator" destination="hRq-zS-lOo" id="EHN-VG-7iK"/>
+                        <outlet property="circleButton" destination="mgf-I9-0ct" id="L2q-Uh-Tiw"/>
+                        <outlet property="roundingButton" destination="xNI-nB-M2L" id="Uq8-K6-A52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trz-hy-zAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="-558"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-for-you-50" width="25" height="25"/>
+        <image name="tea-381235_640" width="612" height="299"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

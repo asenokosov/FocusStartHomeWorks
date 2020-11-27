@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/uzver/FocusStartHomeWorks/FocusStartHomeWorks/ThreadSafeArray/ThreadSafeArray.xcodeproj">
+      location = "group:Homework3/Homework3.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ThreadSafeArray/ThreadSafeArray.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FokusStartHomeWorks.xcodeproj">
