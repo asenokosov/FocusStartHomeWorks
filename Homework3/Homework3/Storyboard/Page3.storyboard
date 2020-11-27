@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yDQ-xZ-I1U">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page3-->
+        <scene sceneID="exw-Wp-nwc">
+            <objects>
+                <viewController id="yDQ-xZ-I1U" customClass="ViewControllerPage3" customModule="Homework3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kvu-lt-MGY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="pexels-eberhard-grossgasteiger-1366919" translatesAutoresizingMaskIntoConstraints="NO" id="b5M-hS-Cv6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI7-IX-ppO">
+                                <rect key="frame" x="139" y="648" width="136" height="48"/>
+                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.84877996575342463" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButton:" destination="yDQ-xZ-I1U" eventType="touchUpInside" id="XfT-cU-LXL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mx4-94-yAp">
+                                <rect key="frame" x="20" y="125" width="374" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czI-wR-gc1">
+                                <rect key="frame" x="20" y="239" width="374" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q0X-lo-7UV"/>
+                        <color key="backgroundColor" red="0.6348120898907873" green="0.47710946505831786" blue="0.69182265228426398" alpha="0.84120826198630139" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="czI-wR-gc1" firstAttribute="trailing" secondItem="Kvu-lt-MGY" secondAttribute="trailingMargin" id="3aK-oA-LsD"/>
+                            <constraint firstItem="czI-wR-gc1" firstAttribute="centerX" secondItem="q0X-lo-7UV" secondAttribute="centerX" id="A84-Si-mcF">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="b5M-hS-Cv6" firstAttribute="centerX" secondItem="fI7-IX-ppO" secondAttribute="centerX" id="CGD-Tg-and"/>
+                            <constraint firstItem="czI-wR-gc1" firstAttribute="leading" secondItem="Kvu-lt-MGY" secondAttribute="leadingMargin" id="ERX-op-61j"/>
+                            <constraint firstItem="mx4-94-yAp" firstAttribute="leading" secondItem="Kvu-lt-MGY" secondAttribute="leadingMargin" id="FUB-WY-QjV"/>
+                            <constraint firstItem="fI7-IX-ppO" firstAttribute="leading" secondItem="q0X-lo-7UV" secondAttribute="leading" constant="139" id="P9h-05-vic"/>
+                            <constraint firstItem="mx4-94-yAp" firstAttribute="top" secondItem="Kvu-lt-MGY" secondAttribute="topMargin" constant="81" id="QkN-ra-clX"/>
+                            <constraint firstItem="czI-wR-gc1" firstAttribute="top" secondItem="mx4-94-yAp" secondAttribute="bottom" constant="80" id="Rfw-hS-mFq"/>
+                            <constraint firstItem="q0X-lo-7UV" firstAttribute="trailing" secondItem="fI7-IX-ppO" secondAttribute="trailing" constant="139" id="Ryd-h1-B3L"/>
+                            <constraint firstItem="mx4-94-yAp" firstAttribute="centerX" secondItem="q0X-lo-7UV" secondAttribute="centerX" id="VGM-uL-wAc">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="q0X-lo-7UV" firstAttribute="bottom" secondItem="fI7-IX-ppO" secondAttribute="bottom" constant="117" id="Wj2-hI-iWB"/>
+                            <constraint firstItem="b5M-hS-Cv6" firstAttribute="leading" secondItem="q0X-lo-7UV" secondAttribute="leading" id="gct-aH-H85"/>
+                            <constraint firstItem="fI7-IX-ppO" firstAttribute="centerX" secondItem="Kvu-lt-MGY" secondAttribute="centerX" id="kCS-GS-Pos"/>
+                            <constraint firstItem="mx4-94-yAp" firstAttribute="trailing" secondItem="Kvu-lt-MGY" secondAttribute="trailingMargin" id="lo7-ka-Fxh"/>
+                            <constraint firstItem="b5M-hS-Cv6" firstAttribute="centerY" secondItem="Kvu-lt-MGY" secondAttribute="centerY" id="mo4-1Z-1z2"/>
+                            <constraint firstItem="b5M-hS-Cv6" firstAttribute="top" secondItem="Kvu-lt-MGY" secondAttribute="topMargin" constant="-44" id="tV4-eX-0Z5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ryd-h1-B3L"/>
+                                <exclude reference="FUB-WY-QjV"/>
+                                <exclude reference="QkN-ra-clX"/>
+                                <exclude reference="VGM-uL-wAc"/>
+                                <exclude reference="lo7-ka-Fxh"/>
+                                <exclude reference="3aK-oA-LsD"/>
+                                <exclude reference="A84-Si-mcF"/>
+                                <exclude reference="ERX-op-61j"/>
+                                <exclude reference="Rfw-hS-mFq"/>
+                                <exclude reference="P9h-05-vic"/>
+                                <exclude reference="kCS-GS-Pos"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ryd-h1-B3L"/>
+                                <include reference="FUB-WY-QjV"/>
+                                <include reference="QkN-ra-clX"/>
+                                <include reference="VGM-uL-wAc"/>
+                                <include reference="lo7-ka-Fxh"/>
+                                <include reference="3aK-oA-LsD"/>
+                                <include reference="A84-Si-mcF"/>
+                                <include reference="ERX-op-61j"/>
+                                <include reference="Rfw-hS-mFq"/>
+                                <include reference="P9h-05-vic"/>
+                                <include reference="kCS-GS-Pos"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Page3" image="icons8-key-50" selectedImage="icons8-key-50" id="svU-U6-Ddd">
+                        <color key="badgeColor" systemColor="systemGreenColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="QDY-Gc-uH8"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="enterButtonConstraint" destination="Wj2-hI-iWB" id="oPx-9S-Dmi"/>
+                        <outlet property="enterButtonSettings" destination="fI7-IX-ppO" id="Rh3-c5-haw"/>
+                        <outlet property="loginField" destination="mx4-94-yAp" id="VbK-SS-8Uv"/>
+                        <outlet property="passwordField" destination="czI-wR-gc1" id="y7I-Nt-buw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5K7-Ls-Bx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1790" y="-258"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-key-50" width="25" height="25"/>
+        <image name="pexels-eberhard-grossgasteiger-1366919" width="2000" height="3000"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
