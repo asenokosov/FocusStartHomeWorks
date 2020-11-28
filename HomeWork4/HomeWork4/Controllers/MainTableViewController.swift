@@ -13,7 +13,7 @@ protocol NewsObjectSelectedDelegate: class {
 
 class MainTableViewController: UITableViewController {
 
-	var news = CellsModel.cellWithNews()
+	private let news = CellsModel.cellWithNews()
 
 	weak var delegate: NewsObjectSelectedDelegate?
 
@@ -30,7 +30,6 @@ class MainTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let currentNews = news[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell\(indexPath.row)", for: indexPath) as! CustomTableViewCell
-
 
 		switch indexPath.row {
 
