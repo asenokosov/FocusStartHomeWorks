@@ -9,7 +9,13 @@ import UIKit
 
 class ViewControllerPage3: UIViewController {
 
-	@IBAction func enterButton(_ sender: Any) {
+	private enum Constants {
+		static let borderWidth: CGFloat = 2.0
+		static let cornerRadius: CGFloat = 20
+		static let duration: TimeInterval = 10
+		static let keyboardHeight = 117
+		static let masksToBounds = true
+		static let colorButtonBoreder = UIColor.black.cgColor
 	}
 
 	@IBOutlet weak var loginField: UITextField!
@@ -17,11 +23,26 @@ class ViewControllerPage3: UIViewController {
 	@IBOutlet weak var enterButtonSettings: UIButton!
 
 	@IBOutlet weak var enterButtonConstraint: NSLayoutConstraint!
-	
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		settingEnterButton()
+		CenterNotification()
+	}
+
+	// Скрывает клавиатуру по тапу за пределами текстовых полей
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesBegan(touches, with: event)
+		self.view.endEditing(true)
+	}
+}
+
+
+private extension ViewControllerPage3 {
+
+	//MARK: Center Notification Observer
+
+	func CenterNotification() {
 		NotificationCenter.default.addObserver(self,
 											   selector: #selector(updateTextView(notification:)),
 											   name: UIResponder.keyboardWillChangeFrameNotification,
@@ -30,39 +51,14 @@ class ViewControllerPage3: UIViewController {
 											   selector: #selector(updateTextView(notification:)),
 											   name: UIResponder.keyboardWillHideNotification,
 											   object: nil)
-
-		//Решение со сдвигом по У
-		//		NotificationCenter.default.addObserver(self, selector: #selector(ViewControllerPage3.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-		//		NotificationCenter.default.addObserver(self, selector: #selector(ViewControllerPage3.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-		//	}
 	}
 
-	// Скрывает клавиатуру по тапу за пределами текстовых полей
-	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		super.touchesBegan(touches, with: event)
-		self.view.endEditing(true)
-	}
-
-	@objc func updateTextView(notification: Notification) {
-
-		guard let userInfo = notification.userInfo as? [String: AnyObject],
-			  let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-		else { return }
-
-		if notification.name == UIResponder.keyboardWillHideNotification {
-			UIView.animate(withDuration: 0.3, animations: { [self] () -> Void in
-							self.enterButtonConstraint.constant = enterButtonConstraint.constant - keyboardFrame.size.height + 117})
-			} else {
-			UIView.animate(withDuration: 0.3, animations: { () -> Void in
-				self.enterButtonConstraint.constant = keyboardFrame.size.height + 20
-			})
-		}
-	}
+	//MARK: Keyboard Show/Hide
 
 	@objc func keyboardWillShow(notification: NSNotification) {
 
 		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-			if view.frame.origin.y == 0{
+			if view.frame.origin.y == 0 {
 				let height = keyboardSize.height
 
 				self.view.frame.origin.y += height
@@ -79,31 +75,34 @@ class ViewControllerPage3: UIViewController {
 		}
 	}
 
-	//Решение со двигом по У
+	//MARK: Enter Button Behavior
 
-	//	@objc func keyboardWillShow(notification: Notification) {
-	//		guard let userInfo = notification.userInfo else { return }
-	//		guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-	//		let keyboardFrame = keyboardSize.cgRectValue
-	//		if self.view.frame.origin.y == 0 { self.view.frame.origin.y -= keyboardFrame.height}
-	//	}
+	@objc func updateTextView(notification: Notification) {
 
-	//	@objc func keyboardWillHide(notification: Notification) {
-	//
-	//			guard let userInfo = notification.userInfo else { return }
-	//			guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-	//			let keyboardFrame = keyboardSize.cgRectValue
-	//			if self.view.frame.origin.y != 0 { self.view.frame.origin.y -= keyboardFrame.height}
-	//	}
-}
+		guard let userInfo = notification.userInfo as? [String: AnyObject],
+			  let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+		else { return }
 
+		if notification.name == UIResponder.keyboardWillHideNotification {
+			UIView.animate(withDuration: Constants.duration) {
+				self.enterButtonConstraint.constant = self.enterButtonConstraint.constant - keyboardFrame.size.height + CGFloat(Constants.keyboardHeight)
+				self.view.layoutIfNeeded()
+			}
+		} else {
+			UIView.animate(withDuration: Constants.duration) {
+				self.enterButtonConstraint.constant = keyboardFrame.size.height
+				self.view.layoutIfNeeded()
+			}
+		}
+	}
 
-extension ViewControllerPage3 {
+	//MARK: Settings button "ENTER"
+
 	func settingEnterButton() {
-		enterButtonSettings.layer.borderWidth = 2.0
-		enterButtonSettings.layer.borderColor = UIColor.black.cgColor
-		enterButtonSettings.layer.cornerRadius = 20
-		enterButtonSettings.layer.masksToBounds = true
 
+		enterButtonSettings.layer.borderWidth = Constants.borderWidth
+		enterButtonSettings.layer.borderColor = Constants.colorButtonBoreder
+		enterButtonSettings.layer.cornerRadius = Constants.cornerRadius
+		enterButtonSettings.layer.masksToBounds = Constants.masksToBounds
 	}
 }
