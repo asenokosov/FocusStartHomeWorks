@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60B8E87CDC481AA91D5123F1 /* Pods_Homework_5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71C5B682A52AF0044A37CC7 /* Pods_Homework_5.framework */; };
+		C32EF76F2574C86300F742FC /* CellTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EF76E2574C86300F742FC /* CellTheme.swift */; };
 		C360BB012563D693004CCAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360BB002563D693004CCAB4 /* AppDelegate.swift */; };
 		C360BB032563D693004CCAB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360BB022563D693004CCAB4 /* SceneDelegate.swift */; };
 		C360BB052563D693004CCAB4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360BB042563D693004CCAB4 /* LoginViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		3802653158D1EBB4845A029E /* Pods-Homework-5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework-5.debug.xcconfig"; path = "Target Support Files/Pods-Homework-5/Pods-Homework-5.debug.xcconfig"; sourceTree = "<group>"; };
 		B71C5B682A52AF0044A37CC7 /* Pods_Homework_5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homework_5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32EF76E2574C86300F742FC /* CellTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTheme.swift; sourceTree = "<group>"; };
 		C360BAFD2563D693004CCAB4 /* Homework-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C360BB002563D693004CCAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C360BB022563D693004CCAB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				C360BB0B2563D69A004CCAB4 /* LaunchScreen.storyboard */,
 				C3B24ACB256422AA005083EF /* GoogleService-Info.plist */,
 				C360BB0E2563D69A004CCAB4 /* Info.plist */,
+				C32EF76E2574C86300F742FC /* CellTheme.swift */,
 			);
 			path = "Support files";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				C3B24AC22563EEC1005083EF /* TasksViewController.swift in Sources */,
 				C360BB012563D693004CCAB4 /* AppDelegate.swift in Sources */,
 				C3CC238B256642BD009635A8 /* Tasks.swift in Sources */,
+				C32EF76F2574C86300F742FC /* CellTheme.swift in Sources */,
 				C3CC238E256642CC009635A8 /* Users.swift in Sources */,
 				C360BB032563D693004CCAB4 /* SceneDelegate.swift in Sources */,
 			);

@@ -15,9 +15,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	var tasksAndUserModel = Array<TaskAndUserModel.Tasks>()
 	
 	@IBOutlet weak var tableView: UITableView!
-
+	
 	//MARK: View Did Load
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -25,9 +25,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		user = TaskAndUserModel.Users(user: currentUser)
 		ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("tasks")
 	}
-
+	
 	//MARK: View Will Appear
-
+	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
@@ -41,9 +41,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 			self?.tableView.reloadData()
 		})
 	}
-
+	
 	//MARK: Table View
-
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return tasksAndUserModel.count
 	}
@@ -66,26 +66,26 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		toggleCompletion(cell, complete: complete)
 		task.ref?.updateChildValues(["completed": complete])
 	}
-
+	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 		let taskTitle = tasksAndUserModel[indexPath.row]
 		let task = tasksAndUserModel[indexPath.row]
 		let complete = task.completed
-
+		
 		cell.textLabel?.text = taskTitle.title
-		cell.backgroundColor = .clear
-		cell.textLabel?.textColor = .white
+		cell.backgroundColor = builder.setBackground
+		cell.textLabel?.textColor = builder.setText
 		toggleCompletion(cell, complete: complete)
 		return cell
 	}
-
+	
 	func toggleCompletion(_ cell: UITableViewCell, complete: Bool) {
 		cell.accessoryType = complete ? .checkmark : .none
 	}
-
+	
 	//MARK: IBActions
-
+	
 	@IBAction func addButton(_ sender: UIBarButtonItem) {
 		let alert = UIAlertController(title: "Новая задача", message: "Добавьте новую задачу", preferredStyle: .alert)
 		alert.addTextField( )
