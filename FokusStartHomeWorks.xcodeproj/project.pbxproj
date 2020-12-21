@@ -67,6 +67,7 @@
 				CE0233642539670300FE6F15 /* Body.swift */,
 				CEDD9ECB25396B13007DD21A /* Car.swift */,
 				CE02335D253966E100FE6F15 /* main.swift */,
+				C3F884A725691D5B001CAAFA /* Func.swift */,
 			);
 			path = FokusStartHomeWorks;
 			sourceTree = "<group>";

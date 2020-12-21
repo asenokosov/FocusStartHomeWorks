@@ -99,6 +99,7 @@ private extension ViewControllerPage3 {
 	//MARK: Settings button "ENTER"
 
 	func settingEnterButton() {
+
 		enterButtonSettings.layer.borderWidth = Constants.borderWidth
 		enterButtonSettings.layer.borderColor = Constants.colorButtonBoreder
 		enterButtonSettings.layer.cornerRadius = Constants.cornerRadius

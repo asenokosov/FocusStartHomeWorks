@@ -9,7 +9,7 @@
 import Foundation
 
 class Functions {
-	
+
 	let	errorMessage = "Введите корректное значение"
 	
 	func menu () {
@@ -30,6 +30,7 @@ class Functions {
 		car.model = self.checkString()
 		
 		print("Введите цифру, соответсвующую типу корпуса:", "\n", "1 - Хэтчбэк", "\n", "2 - Седан", "\n", "любой другой ввод - Нет подходящего типа")
+
 		let carBody = self.checkInt()
 		if carBody == 1 {car.body = .Hatchback}
 		else if carBody == 2 {car.body = .Sedan}
@@ -62,6 +63,7 @@ class Functions {
 	}
 	
 	func addedCarsFilter() {
+
 		if let carBody = Int(readLine() ?? "") {
 			var selectedBody:Body
 			if carBody == 1 {selectedBody = .Hatchback}
@@ -69,6 +71,7 @@ class Functions {
 			else {selectedBody = .Unknown}
 			for _ in autoCatalog {
 				autoCatalog.filter{$0.body == selectedBody}.forEach{ self.result($0)}
+
 			}
 		} else {
 			return
@@ -83,7 +86,9 @@ class Functions {
 				writeString = string
 			}
 			else {
+
 				print(errorMessage)
+
 			}
 		}
 		return writeString
