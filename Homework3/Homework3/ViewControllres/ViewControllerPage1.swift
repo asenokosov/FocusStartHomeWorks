@@ -8,50 +8,35 @@
 import UIKit
 
 class ViewControllerPage1: UIViewController {
-
-	@IBOutlet weak var labelOnTop: UILabel!
-	@IBOutlet weak var labelBigSize: UILabel!
-	@IBOutlet weak var labelThisTwoString: UILabel!
-
+	
+	private let cornerRadius: CGFloat = 8
+	private let borderWidth: CGFloat = 1
+	
 	@IBOutlet weak var circleButton: UIButton!
 	@IBOutlet weak var roundingButton: UIButton!
-
-	@IBOutlet weak var ourImage: UIImageView!
-
+	
 	@IBOutlet weak var activIndicator: UIActivityIndicatorView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		buttonSettings()
-		activIndicator.startAnimating()
-	}
-
-
-
-}
-
-
-extension ViewControllerPage1 {
-	func animationIconActivity() {
+		configureButtons()
 		activIndicator.startAnimating()
 	}
 }
 
 
-
-extension ViewControllerPage1 {
-	func buttonSettings() {
-		circleButton.layer.cornerRadius =
-			circleButton.bounds.size.width/2
+private extension ViewControllerPage1 {
+	func configureButtons() {
+		circleButton.layer.cornerRadius = circleButton.bounds.size.width / 2
 		circleButton.backgroundColor = UIColor(named: "#5D151F")
 		circleButton.layer.borderColor = UIColor.white.cgColor
-		circleButton.layer.borderWidth = 1
+		circleButton.layer.borderWidth = borderWidth
 		circleButton.setTitle("Circle", for: .normal)
-
-		roundingButton.layer.cornerRadius = 8
+		
+		roundingButton.layer.cornerRadius = cornerRadius
 		roundingButton.backgroundColor = UIColor(named: "#5D151F")
 		roundingButton.layer.borderColor = UIColor.white.cgColor
-		roundingButton.layer.borderWidth = 1
+		roundingButton.layer.borderWidth = borderWidth
 		roundingButton.setTitle("Round", for: .normal)
 	}
 }

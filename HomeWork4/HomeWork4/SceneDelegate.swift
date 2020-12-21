@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		detailViewController.navigationItem.leftItemsSupplementBackButton = true
 		detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
 		masterViewController.delegate = detailViewController
-		let firstNew = masterViewController.news[0]
-		detailViewController.cellObject = firstNew
+		let firstNew = CellsModel.cellWithNews()
+		detailViewController.cellObject = firstNew[0]
 
 	}
 

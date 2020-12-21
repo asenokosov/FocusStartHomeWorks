@@ -13,7 +13,7 @@ protocol NewsObjectSelectedDelegate: class {
 
 class MainTableViewController: UITableViewController {
 
-	var news = CellsModel.cellWithNews()
+	private let news = CellsModel.cellWithNews()
 
 	weak var delegate: NewsObjectSelectedDelegate?
 
@@ -29,34 +29,45 @@ class MainTableViewController: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let currentNews = news[indexPath.row]
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell\(indexPath.row)", for: indexPath) as! CustomTableViewCell
 
-		if indexPath.row == 0 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomTableViewCell1
-			cell.headerCellOne.text = currentNews.headingNews
-			cell.textCellOne.text = currentNews.textNews
-			return cell
-		} else if indexPath.row == 1 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! CustomTableViewCell2
-			cell.headre2.text = currentNews.headingNews
-			cell.label2.text = currentNews.textNews
-			return cell
-		} else if indexPath.row == 2 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath) as! CustomTableViewCell3
-			cell.header3.text = currentNews.headingNews
-			cell.label3.text = currentNews.textNews
-			return cell
-		} else if indexPath.row == 3 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! CustomTableViewCell4
-			cell.headerCellFour.text = currentNews.headingNews
-			cell.labelCellFour.text = currentNews.textNews
-			return cell
-		} else {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "Cell5", for: indexPath) as! CustomTableViewCell5
-			cell.headerCellFive.text = currentNews.headingNews
-			return cell
+		switch indexPath.row {
+
+		case 0:
+			let cellOne = cell
+			cellOne.headerCellOne.text = currentNews.headingNews
+			cellOne.textCellOne.text = currentNews.textNews
+			return cellOne
+
+		case 1:
+			let cellTwo = cell
+			cellTwo.headre2.text = currentNews.headingNews
+			cellTwo.label2.text = currentNews.textNews
+			return cellTwo
+
+		case 2:
+			let cellThree = cell
+			cellThree.header3.text = currentNews.headingNews
+			cellThree.label3.text = currentNews.textNews
+			return cellThree
+
+		case 3:
+			let cellFour = cell
+			cellFour.headerCellFour.text = currentNews.headingNews
+			cellFour.labelCellFour.text = currentNews.textNews
+			return cellFour
+			
+		case 4:
+			let cellFive = cell
+			cellFive.headerCellFive.text = currentNews.headingNews
+			return cellFive
+
+		default:
+			break
 		}
+		return cell
 	}
-
+	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let currentNews = news[indexPath.row]
 		delegate?.newsObjectSelected(newsObject: currentNews)
