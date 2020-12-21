@@ -18,13 +18,10 @@ class MainViewController: UIViewController {
 	@IBOutlet weak var showText: UILabel!
 	@IBOutlet weak var actionButton: UIButton!
 	@IBOutlet weak var hideText: UILabel!
-	
-	@IBAction func actionButtonTapped(_ sender: UIButton) {
-	}
-	
-	let cat = Notification.Name(rawValue: catNotificationKey)
-	let forest = Notification.Name(rawValue: forestNotificationKey)
-	let cristmas = Notification.Name(rawValue: cristmasNotificationKey)
+		
+	private let cat = Notification.Name(rawValue: catNotificationKey)
+	private let forest = Notification.Name(rawValue: forestNotificationKey)
+	private let cristmas = Notification.Name(rawValue: cristmasNotificationKey)
 	
 	deinit {
 		NotificationCenter.default.removeObserver(self)

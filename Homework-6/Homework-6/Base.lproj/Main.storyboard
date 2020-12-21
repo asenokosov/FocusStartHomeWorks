@@ -42,8 +42,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELa-ml-3Au"/>
-                                    <segue destination="CvC-id-TBZ" kind="presentation" identifier="SecondViewController" modalPresentationStyle="fullScreen" id="y3U-Ri-Bnn"/>
+                                    <segue destination="CvC-id-TBZ" kind="show" id="vtk-ol-kMR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ох...тут что-то будет..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-2m-zM5">
@@ -95,7 +94,7 @@
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="CvC-id-TBZ" customClass="SecondViewController" customModule="Homework_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNJ-dZ-Xos">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери картинку" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAQ-HU-aoJ">
