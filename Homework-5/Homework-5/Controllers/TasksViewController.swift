@@ -10,9 +10,9 @@ import Firebase
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var user: TaskAndUserModel.Users!
-	var ref: DatabaseReference!
-	var tasksAndUserModel = Array<TaskAndUserModel.Tasks>()
+	private var user: TaskAndUserModel.Users?
+	private var ref: DatabaseReference?
+	private var tasksAndUserModel = Array<TaskAndUserModel.Tasks>()
 	
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -23,7 +23,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		
 		guard let currentUser = Auth.auth().currentUser else { return }
 		user = TaskAndUserModel.Users(user: currentUser)
-		ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("tasks")
+		ref = Database.database().reference(withPath: "users").child(String(user?.uid ?? "")).child("tasks")
 	}
 	
 	//MARK: View Will Appear
@@ -31,7 +31,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		ref.observe(.value, with: { [weak self] (snapshot) in
+		ref?.observe(.value, with: { [weak self] (snapshot) in
 			var _tasks = Array<TaskAndUserModel.Tasks>()
 			for item in snapshot.children {
 				let task = TaskAndUserModel.Tasks.init(snapshot: item as! DataSnapshot)
@@ -91,8 +91,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		alert.addTextField( )
 		let save = UIAlertAction(title: "Сохранить", style: .default) { [weak self] _ in
 			guard let textField = alert.textFields?.first, textField.text != "" else { return }
-			let task = TaskAndUserModel.Tasks(title: textField.text!, userID: (self?.user.uid)!)
-			let taskRef = self?.ref.child(task.title.lowercased())
+			let task = TaskAndUserModel.Tasks(title: textField.text!, userID: (self?.user?.uid)!)
+			let taskRef = self?.ref?.child(task.title.lowercased())
 			taskRef?.setValue(["title": task.title, "userID": task.userID, "completed": task.completed])
 		}
 		let cancel = UIAlertAction(title: "Отмена", style: .default, handler: nil)

@@ -7,7 +7,11 @@
 		<key>FokusStartHomeWorks.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>1</integer>
+=======
+			<integer>3</integer>
+>>>>>>> feature/homework-5
 		</dict>
 	</dict>
 </dict>
