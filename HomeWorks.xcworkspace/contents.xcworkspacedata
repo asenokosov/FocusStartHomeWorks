@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:Homework8"
+      name = "Homework8">
+      <FileRef
+         location = "group:Homework8.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Company+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Worker+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Company+CoreDataProperties.swift">
+      </FileRef>
+      <Group
+         location = "group:Homework8"
+         name = "Homework8">
+         <Group
+            location = "group:Viewcontrollers"
+            name = "Viewcontrollers">
+            <FileRef
+               location = "group:NewWorkerViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:CompanysViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:DetailTableViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NewCompanyViewController.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:SupportFiles"
+            name = "SupportFiles">
+            <FileRef
+               location = "group:ViewController.swift">
+            </FileRef>
+            <Group
+               location = "group:Assets.xcassets"
+               name = "Assets.xcassets">
+               <Group
+                  location = "group:AppIcon.appiconset"
+                  name = "AppIcon.appiconset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:AccentColor.colorset"
+                  name = "AccentColor.colorset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Base.lproj"
+               name = "Base.lproj">
+               <FileRef
+                  location = "group:LaunchScreen.storyboard">
+               </FileRef>
+               <FileRef
+                  location = "group:Main.storyboard">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Homework8.xcdatamodeld">
+            </FileRef>
+            <FileRef
+               location = "group:AppDelegate.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:SceneDelegate.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:CustomCell"
+            name = "CustomCell">
+            <FileRef
+               location = "group:CustomWorkerTableViewCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:CustomCompanyTableViewCell.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Worker+CoreDataClass.swift">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Homework-6/Homework-6.xcodeproj">
    </FileRef>
