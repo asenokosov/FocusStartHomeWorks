@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3F884A825691D5B001CAAFA /* Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F884A725691D5B001CAAFA /* Func.swift */; };
+		C31C40A5256A782400C7D9E0 /* Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C40A4256A782400C7D9E0 /* Func.swift */; };
 		CE02335E253966E100FE6F15 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02335D253966E100FE6F15 /* main.swift */; };
 		CE0233652539670300FE6F15 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0233642539670300FE6F15 /* Body.swift */; };
 		CEDD9ECC25396B13007DD21A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD9ECB25396B13007DD21A /* Car.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C3F884A725691D5B001CAAFA /* Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Func.swift; sourceTree = "<group>"; };
+		C31C40A4256A782400C7D9E0 /* Func.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Func.swift; sourceTree = "<group>"; };
 		CE02335A253966E100FE6F15 /* FokusStartHomeWorks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FokusStartHomeWorks; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE02335D253966E100FE6F15 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CE0233642539670300FE6F15 /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		CE02335C253966E100FE6F15 /* FokusStartHomeWorks */ = {
 			isa = PBXGroup;
 			children = (
+				C31C40A4256A782400C7D9E0 /* Func.swift */,
 				CE0233642539670300FE6F15 /* Body.swift */,
 				CEDD9ECB25396B13007DD21A /* Car.swift */,
 				CE02335D253966E100FE6F15 /* main.swift */,
@@ -130,7 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0233652539670300FE6F15 /* Body.swift in Sources */,
-				C3F884A825691D5B001CAAFA /* Func.swift in Sources */,
+				C31C40A5256A782400C7D9E0 /* Func.swift in Sources */,
 				CE02335E253966E100FE6F15 /* main.swift in Sources */,
 				CEDD9ECC25396B13007DD21A /* Car.swift in Sources */,
 			);

@@ -8,13 +8,13 @@
 import UIKit
 
 class ViewControllerPage2: UIViewController {
-
+	
 	@IBOutlet weak var imageBook: UIImageView!
-
+	
 	@IBOutlet weak var textLabel: UILabel!
-
+	
 	override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+		super.viewDidLoad()
+	}
+	
 }
